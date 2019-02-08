@@ -11,7 +11,7 @@ ifttt-client — Simple gem for IFTTT integration.
   require 'ifttt'
 
   example=IFTTT::Profile.new("YOUR_WEBHOOK_KEY")
-  example.get("EVENT_NAME") # Simple get requst
+  example.get("EVENT_NAME") # Simple get request
   example.post("EVENT_NAME",["array","of","values"]) # Post request with array of values
 
 == Copyright
