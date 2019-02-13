@@ -20,7 +20,6 @@ module IFTTT
             uri = URI("https://maker.ifttt.com/trigger/#{event}/with/key/#{@key}")
             req = Net::HTTP::Post.new(uri, 'Content-Type' => 'application/json')
             req.body = hash.to_json
-            puts hash.to_json
             res = Net::HTTP.start(uri.hostname, uri.port, :use_ssl => uri.scheme == 'https') do |http|
                 http.request(req)
             end
